@@ -1,0 +1,83 @@
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.form-section {
+	display: flex;
+	gap: 10px;
+}
+
+.form-section input {
+	padding: 4px;
+	outline: none;
+}
+
+.task-section {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.task-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2px 8px;
+	border: 1px solid rgb(118, 118, 118);
+	border-radius: 8px;
+}
+
+.task-card__actions {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.task-card__actions button,
+.create-btn {
+	padding: 2px 8px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.task-card__actions button:hover {
+	opacity: 0.8;
+}
+
+.ok-btn {
+	background-color: rgb(28, 125, 28);
+}
+.edit-btn {
+	background-color: rgb(20, 20, 151);
+}
+.delete-btn {
+	background-color: rgb(178, 9, 9);
+}
+
+.wrapper {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
