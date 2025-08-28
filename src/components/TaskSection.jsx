@@ -1,14 +1,10 @@
+import { BsFillPencilFill } from 'react-icons/bs'
+import { FaTrash } from 'react-icons/fa'
+import Checkbox from './Checkbox'
+
 function TaskSection({ tasks, setTasks }) {
 	const deleteTask = taskId => {
 		setTasks(prev => prev.filter(el => el.id !== taskId))
-	}
-
-	const toggleTask = taskId => {
-		setTasks(prev =>
-			prev.map(t =>
-				taskId === t.id ? { ...t, isCompleted: !t.isCompleted } : t
-			)
-		)
 	}
 
 	return (
@@ -18,17 +14,19 @@ function TaskSection({ tasks, setTasks }) {
 					<div key={task.id} className='task-card'>
 						<span>{task.title}</span>
 						<div className='task-card__actions'>
-							<input
-								type='checkbox'
-								checked={task.isCompleted}
-								onChange={() => toggleTask(task.id)}
+							<Checkbox
+								setTasks={setTasks}
+								taskId={task.id}
+								isChecked={task.isCompleted}
 							/>
-							<button className='edit-btn'>Edit</button>
+							<button className='edit-btn'>
+								<BsFillPencilFill size={12} />
+							</button>
 							<button
 								className='delete-btn'
 								onClick={() => deleteTask(task.id)}
 							>
-								Delete
+								<FaTrash size={12} />
 							</button>
 						</div>
 					</div>

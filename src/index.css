@@ -40,14 +40,21 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 2px 8px;
-	border: 1px solid rgb(118, 118, 118);
 	border-radius: 8px;
+	background-color: #101010;
 }
 
 .task-card__actions {
 	display: flex;
 	align-items: center;
 	gap: 4px;
+}
+
+.task-card__actions button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px !important;
 }
 
 .task-card__actions button,
@@ -80,4 +87,20 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+}
+
+.checkbox {
+	height: 16px;
+	width: 16px;
+	padding: 4px;
+	border: 1px solid #008b8b;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+
+.active {
+	background-color: #008b8b;
 }

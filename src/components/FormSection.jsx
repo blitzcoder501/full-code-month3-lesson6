@@ -12,6 +12,8 @@ function FormSection({ setTasks }) {
 			},
 			...prev,
 		])
+
+		setTaskTitle('')
 	}
 
 	function handleInputChange(event) {
@@ -20,7 +22,12 @@ function FormSection({ setTasks }) {
 
 	return (
 		<section className='form-section'>
-			<input type='text' placeholder='Title' onChange={handleInputChange} />
+			<input
+				type='text'
+				placeholder='Title'
+				value={taskTitle}
+				onChange={handleInputChange}
+			/>
 			<button className='create-btn' onClick={addTodo}>
 				Создать
 			</button>
